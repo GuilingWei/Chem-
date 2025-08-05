@@ -1,0 +1,62 @@
+ input  file name : crest_rotamers_2.xyz
+ output file name : crest_rotamers_3.xyz
+ number of atoms                :   26
+ number of points on xyz files  :   432
+ RMSD threshold                 :   0.1250
+ Bconst threshold               :   0.0100
+ population threshold           :   0.0500
+ conformer energy window  /kcal :   6.0000
+ # fragment in coord            :     1
+ # bonds in reference structure :    27
+ number of reliable points      :   432
+ number of removed by energy    :    37
+ number of remaining points     :   395
+ reference state Etot :  -43.473400750000003     
+ number of doubles removed by rot/RMSD         :         358
+ total number unique points considered further :          37
+       Erel/kcal        Etot weight/tot  conformer     set   degen     origin
+       1   0.000   -43.47340    0.10998    0.65964       1       6     mtd9
+       2   0.000   -43.47340    0.10996                                mtd5
+       3   0.000   -43.47340    0.10994                                mtd5
+       4   0.000   -43.47340    0.10992                                mtd6
+       5   0.000   -43.47340    0.10992                                mtd2
+       6   0.000   -43.47340    0.10992                                mtd7
+       7   0.258   -43.47299    0.07123    0.21359       2       3     mtd2
+       8   0.258   -43.47299    0.07120                                mtd2
+       9   0.258   -43.47299    0.07117                                mtd6
+      10   0.663   -43.47234    0.03597    0.07190       3       2     mtd3
+      11   0.663   -43.47234    0.03593                                mtd10
+      12   1.416   -43.47114    0.01010    0.01010       4       1     mtd8
+      13   1.508   -43.47100    0.00865    0.04320       5       5     mtd1
+      14   1.508   -43.47100    0.00865                                mtd4
+      15   1.509   -43.47100    0.00863                                mtd8
+      16   1.509   -43.47100    0.00863                                mtd4
+      17   1.509   -43.47100    0.00863                                mtd8
+      18   3.716   -43.46748    0.00021    0.00021       6       1     mtd4
+      19   4.226   -43.46667    0.00009    0.00044       7       5     mtd1
+      20   4.226   -43.46667    0.00009                                mtd7
+      21   4.226   -43.46667    0.00009                                mtd12
+      22   4.226   -43.46667    0.00009                                mtd5
+      23   4.227   -43.46666    0.00009                                mtd5
+      24   4.345   -43.46648    0.00007    0.00043       8       6     mtd5
+      25   4.345   -43.46648    0.00007                                mtd5
+      26   4.345   -43.46648    0.00007                                mtd10
+      27   4.346   -43.46648    0.00007                                mtd12
+      28   4.346   -43.46648    0.00007                                mtd5
+      29   4.346   -43.46648    0.00007                                mtd11
+      30   4.369   -43.46644    0.00007    0.00042       9       6     mtd5
+      31   4.369   -43.46644    0.00007                                mtd12
+      32   4.369   -43.46644    0.00007                                mtd12
+      33   4.369   -43.46644    0.00007                                mtd5
+      34   4.370   -43.46644    0.00007                                mtd11
+      35   4.370   -43.46644    0.00007                                mtd4
+      36   4.635   -43.46601    0.00004    0.00004      10       1     mtd12
+      37   4.786   -43.46577    0.00003    0.00003      11       1     mtd7
+T /K                                  :   298.15
+E lowest                              :   -43.47340
+ensemble average energy (kcal)        :    0.189
+ensemble entropy (J/mol K, cal/mol K) :   21.005    5.020
+ensemble free energy (kcal/mol)       :   -1.497
+population of lowest in %             :   65.964
+ number of unique conformers for further calc           11
+ list of relative energies saved as "crest.energies"
