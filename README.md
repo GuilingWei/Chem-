@@ -1,53 +1,49 @@
-# LD50 Prediction from Molecular Representations
+# LD50 Prediction from Molecular IR Spectra
 
-This repository contains code, data, and supporting materials for a research project aimed at predicting LD₅₀ (lethal dose, 50%) values for small molecules. Molecular features were derived by concatenating infrared (IR) spectral vectors with Extended Functional Class Fingerprints (EFCP), both based on original SMILES inputs.
+This repository contains code, data, and supporting materials for a research project aimed at predicting LD₅₀ (lethal dose, 50%) values for molecules. 
 
-The project explores several machine learning approaches to evaluate how well such representations can predict molecular toxicity. It includes preprocessing scripts, training routines, and evaluation workflows.
+Molecular features are derived from **interpolated infrared (IR) spectra** generated from molecular structures (via SMILES → 3D conformers → vibrational analysis).  
+
+The project evaluates several regression approaches, focusing on the predictive power of **spectral features** for molecular toxicity.
 
 ---
+
 
 ## Repository Contents
 
 .
 ├── data/
-│ ├── raw/ # Raw molecular data (e.g. SMILES, IR spectra)
-│ ├── processed/ # Final input vectors and LD50 labels
+│ ├── raw/ # Raw molecular data (e.g., SMILES, raw IR spectra files)
+│ ├── processed/ # Preprocessed spectral vectors and LD50 labels 
 │ └── missing/ # Molecules with missing/invalid features (optional)
 ├── src/
-│ ├── preprocessing.py # Feature extraction and transformation scripts
-│ ├── train_models.py # Main scripts for training regression models
-│ └── evaluate.py # Metrics and prediction analysis
+│ ├── preprocessing.py # Feature extraction, interpolation, zero-variance filtering
+│ ├── train_models.py # Regression model training scripts (RF, XGBoost, CNN)
+│ ├── evaluate.py # Model evaluation scripts
+│ └── utils/ # Helper functions
 ├── models/
-│ └── saved/ # Serialized models (.pkl, .h5, etc.)
+│ └── saved/ # Serialized trained models (.joblib, .h5, etc.)
 ├── notebooks/
-│ └── model_training.ipynb # Jupyter notebook for full training pipeline
+│ └── model_training.ipynb # Jupyter notebook for exploratory training/testing
 ├── slurm_scripts/
-│ └── crest_array.slurm # Job array script for parallel molecular processing (optional)
-├── requirements.txt # Python environment specification
-└── README.md # Project overview and metadata
+│ └── crest_array.slurm # Example SLURM job array for vibrational analysis
+├── requirements.txt # Python dependencies
+└── README.md # Project overview (this file)
 
 
 ---
 
-## Project Overview
 
-Each molecule is encoded as a fixed-length (1,000-bit) vector derived from:
+## License
 
-- A numerical representation of its IR spectrum (e.g., interpolated/transformed)
-- An EFCP molecular fingerprint (e.g., RDKit-derived)
+This repository uses a **three-way licensing structure** to maximise re-use while preserving attribution where appropriate.
 
-Regression models (including Random Forest, Support Vector Machine, and Multilayer Perceptron) are trained to predict LD₅₀ values, which serve as the ground truth labels. The project benchmarks model performance using standard metrics such as R², RMSE, and MAE.
+- **Code** (`src/`, `slurm_scripts/`):  
+  Licensed under the **MIT License** — you may use, modify, and distribute, even commercially, with attribution.  
 
----
+- **Research Data** (`data/`):  
+  Released under **CC0 1.0 Universal (Public Domain Dedication)** — you may copy, modify, and use without any restrictions.  
+  *(Note: In most jurisdictions, raw factual data such as experimental LD₅₀ values and computed spectra are not copyrightable.)*
 
-## How to Use
-
-1. Prepare your data in `data/processed/` as NumPy arrays or `.csv` files.
-2. Train a model using `train_models.py`.
-3. Evaluate the model using `evaluate.py` or `notebooks/model_training.ipynb`.
-4. Models and logs will be saved in `models/`.
-
-Python 3.8+ is recommended. Install dependencies using:
-
-```bash
-pip install -r requirements.txt
+- **Creative Content** (documentation, database schema, figures, descriptions):  
+  Licensed under **CC BY 4.0** — you may share and adapt for any purpose, even commercially, but must give appropriate credit.  
