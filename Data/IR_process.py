@@ -12,7 +12,7 @@ import re
 FIXED_LENGTH = 2520          # base grid length before optional downsampling
 WN_MIN = 400.0
 WN_MAX = 4000.0
-FWHM = 20.0                  # Gaussian broadening width (cm^-1). Try 10, 20, 40
+FWHM = 10.0                  # Gaussian broadening width (cm^-1). Try 10, 20, 40
 ADD_BAND_FEATURES = True     # append compact band features
 DOWNSAMPLE_STRIDE = 1        # e.g., 2 or 4 to reduce dimensionality; 1 = no downsample
 OUTPUT_CSV = "Broadening_Normalization.csv"  
