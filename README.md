@@ -12,24 +12,13 @@ The project evaluates several regression approaches, focusing on the predictive 
 ## Repository Contents
 
 .
-├── data/
-│ ├── raw/ # Raw molecular data (e.g., SMILES, raw IR spectra files)
-│ ├── processed/ # Preprocessed spectral vectors and LD50 labels 
-│ └── missing/ # Molecules with missing/invalid features (optional)
-├── src/
-│ ├── preprocessing.py # Feature extraction, interpolation, zero-variance filtering
-│ ├── train_models.py # Regression model training scripts (RF, XGBoost, CNN)
-│ ├── evaluate.py # Model evaluation scripts
-│ └── utils/ # Helper functions
-├── models/
-│ └── saved/ # Serialized trained models (.joblib, .h5, etc.)
-├── notebooks/
-│ └── model_training.ipynb # Jupyter notebook for exploratory training/testing
-├── slurm_scripts/
-│ └── crest_array.slurm # Example SLURM job array for vibrational analysis
-├── requirements.txt # Python dependencies
-└── README.md # Project overview (this file)
-
+├── Data/
+│ ├── IR_process.py # Script for processing IR spectra
+│ ├── Inchikey_diagnose.py # Script for diagnosing InChIKey issues
+│ ├── Chem_Broden_Group_Final.ipynb # Final notebook with broadening included
+│ ├── Chem_Nobroadening_Final.ipynb # Final notebook without broadening
+│ └── .DS_Store # macOS system file (can be ignored)
+├── README.md 
 
 ---
 
