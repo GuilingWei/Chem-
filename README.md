@@ -11,8 +11,7 @@ The project evaluates several regression approaches, focusing on the predictive 
 
 ## Repository Contents
 
-## Repository Contents
-
+```
 .
 ├── src/
 │   ├── mapping/
@@ -30,6 +29,7 @@ The project evaluates several regression approaches, focusing on the predictive 
 ├── Chem_Nobroadening_Final.ipynb        # Final notebook without broadening
 └── README.md                            # Repository documentation
 
+```
 
 ## License
 
