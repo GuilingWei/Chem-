@@ -11,16 +11,24 @@ The project evaluates several regression approaches, focusing on the predictive 
 
 ## Repository Contents
 
-.
-├── Data/
-│ ├── IR_process.py # Script for processing IR spectra
-│ ├── Inchikey_diagnose.py # Script for diagnosing InChIKey issues
-│ ├── Chem_Broden_Group_Final.ipynb # Final notebook with broadening included
-│ ├── Chem_Nobroadening_Final.ipynb # Final notebook without broadening
-│ └── .DS_Store # macOS system file (can be ignored)
-├── README.md 
+## Repository Contents
 
----
+.
+├── src/
+│   ├── mapping/
+│   │   ├── __init__.py
+│   │   ├── generate_inchikey_mapping.py
+│   │   └── Inchikey_diagnose.py         # Script for diagnosing InChIKey issues
+│   ├── transform/
+│   │   ├── __init__.py
+│   │   ├── ir2grid_broadening.py        # Script for grid conversion with broadening
+│   │   └── ir2grid.py                   # Script for grid conversion without broadening
+│   ├── __init__.py
+│   ├── ECFP.py                          # Script for generating Extended-Connectivity Fingerprints
+│   └── feature_engineering.py           # Feature engineering utilities
+├── Chem_Broden_Group_Final.ipynb        # Final notebook with broadening included
+├── Chem_Nobroadening_Final.ipynb        # Final notebook without broadening
+└── README.md                            # Repository documentation
 
 
 ## License
